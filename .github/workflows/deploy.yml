@@ -32,6 +32,5 @@ jobs:
                       cd ~/beleap-blog
                       pkill node
                       git pull
-                      yarn
-                      yarn build
-                      yarn start
+                      yarn install --timeout 10000000
+                      yarn prod

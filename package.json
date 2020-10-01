@@ -5,13 +5,16 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "start": "next start"
+        "start": "next start",
+        "preprod": "yarn build",
+        "prod": "pm2 startOrReload yarn --name \"beleap-blog\" --interpreter bash -- start"
     },
     "dependencies": {
         "classnames": "^2.2.6",
         "date-fns": "^2.16.1",
         "gray-matter": "^4.0.2",
         "next": "9.5.3",
+        "pm2": "^4.5.0",
         "postcss-flexbugs-fixes": "^4.2.1",
         "postcss-preset-env": "^6.7.0",
         "react": "16.13.1",
