@@ -9,12 +9,12 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout
+            - name: Setup
               uses: actions/checkout@v2
-            - name: Check Buildability
               uses: actions/setup-node@v1
               with:
                   node-version: '12'
+            - name: Check Buildability
               run: yarn build
             - name: Run Blog
               uses: appleboy/ssh-action@master
