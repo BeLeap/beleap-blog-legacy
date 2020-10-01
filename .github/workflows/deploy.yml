@@ -16,6 +16,8 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: '12'
+            - name: Install Dependencies
+              run: yarn
             - name: Check Buildability
               run: yarn build
             - name: Run Blog
