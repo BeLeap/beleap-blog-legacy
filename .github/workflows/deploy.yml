@@ -1,0 +1,28 @@
+name: Deploy Blog
+
+on:
+    push: main
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Check Buildability
+              uses: actions/setup-node@v1
+              with:
+                  node-version: '12'
+              run: yarn build
+            - name: Run Blog
+              uses: appleboy/ssh-action@master
+              with:
+                  host: ${{secrets.HOST}}
+                  username: ${{secrets.USERNAME}}
+                  password: ${{secrets.PASSWORD}}
+                  port: ${{secrets.PORT}}
+                  script: |
+                      cd ~/beleap-blog
+                      git pull
+                      yarn build
+                      yarn start
