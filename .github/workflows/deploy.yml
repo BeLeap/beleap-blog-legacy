@@ -33,4 +33,4 @@ jobs:
                       pkill node
                       git pull
                       yarn install --timeout 10000000
-                      yarn prod
+                      yarn prod --timout 10000000
