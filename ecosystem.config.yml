@@ -1,0 +1,8 @@
+apps:
+    - script: yarn start
+      name: 'beleap-blog'
+      instances: 'max'
+      watch: true
+      env:
+          NODE_ENV: 'production'
+          exec_mode: 'cluster'
