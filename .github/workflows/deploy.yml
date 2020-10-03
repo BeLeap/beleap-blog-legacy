@@ -32,13 +32,3 @@ jobs:
                       cd ~/beleap-blog
                       git pull
                       yarn install --timeout 10000000
-            - name: Run Blog
-              uses: appleboy/ssh-action@master
-              with:
-                  host: ${{secrets.HOST}}
-                  username: ${{secrets.USERNAME}}
-                  key: ${{secrets.KEY}}
-                  port: ${{secrets.PORT}}
-                  timeout: 200m
-                  script: |
-                      yarn prod --timeout 10000000
