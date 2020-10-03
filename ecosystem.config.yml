@@ -5,4 +5,4 @@ apps:
       watch: true
       env:
           NODE_ENV: 'production'
-          exec_mode: 'cluster'
+      exec_mode: 'cluster'
