@@ -7,5 +7,6 @@ COPY . /beleap-blog
 
 WORKDIR /beleap-blog
 RUN yarn
+RUN yarn build
 
 CMD yarn start
