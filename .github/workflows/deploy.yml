@@ -34,5 +34,6 @@ jobs:
                   port: ${{secrets.PORT}}
                   timeout: 200m
                   script: |
-                      if [ -z $(docker ps --all | grep beleap-blog)] then docker rm --force beleap-blog else echo  "Running container not found" fi
-                      docker run -d --restart=always -p 8080:3000 --name beleap-blog beleap/beleap-blog
+                      echo "if [ -z $(docker ps --all | grep beleap-blog)] then docker rm --force beleap-blog else echo  \"Running container not found\" fi" > run.sh
+                      echo "docker run -d --restart=always -p 8080:3000 --name beleap-blog beleap/beleap-blog" >> run.sh
+                      ./run.sh
