@@ -33,4 +33,6 @@ jobs:
                   key: ${{secrets.KEY}}
                   port: ${{secrets.PORT}}
                   timeout: 200m
-                  script: docker run -d -p 8080:3000 --name beleap-blog beleap/beleap-blog
+                  script: |
+                      docker stop beleap-blog
+                      docker run -d --restart=unless-stopped --rm -p 8080:3000 --name beleap-blog beleap/beleap-blog
