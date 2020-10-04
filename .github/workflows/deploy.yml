@@ -24,7 +24,7 @@ jobs:
             - name: Push to docker hub :latest
               uses: actions-hub/docker@master
               with:
-                  args: push ${GITHUB_REPOSITORY}:latestd
+                  args: push beleap/beleap-blog:latest
             - name: Run Blog
               uses: appleboy/ssh-action@master
               with:
