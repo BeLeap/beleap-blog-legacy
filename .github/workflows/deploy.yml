@@ -20,7 +20,7 @@ jobs:
               run: yarn
             - name: Check Buildability
               run: yarn build
-            - name: Run Blog
+            - name: Install Dependencies on Server
               uses: appleboy/ssh-action@master
               with:
                   host: ${{secrets.HOST}}
@@ -31,4 +31,15 @@ jobs:
                   script: |
                       cd ~/beleap-blog
                       git pull
-                      yarn install --timeout 10000000
+                      yarn install --timeout 1000000
+            - name: Run Blog
+              uses: appleboy/ssh-action@master
+              with:
+                  host: ${{secrets.HOST}}
+                  username: ${{secrets.USERNAME}}
+                  key: ${{secrets.KEY}}
+                  port: ${{secrets.PORT}}
+                  timeout: 200m
+                  script: |
+                      cd ~/beleap-blog
+                      yarn prod
