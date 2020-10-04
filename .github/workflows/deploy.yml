@@ -36,9 +36,9 @@ jobs:
                   script: |
                       echo "if [ -z \$(docker ps --all | grep beleap-blog)]" > run.sh
                       echo "then" >> run.sh
-                      echo "    docker rm --force beleap-blog" >> run.sh
-                      echo "else" >> run.sh
                       echo "    echo  \"Running container not found\"" >> run.sh
+                      echo "else" >> run.sh
+                      echo "    docker rm --force beleap-blog" >> run.sh
                       echo "fi" >> run.sh
                       echo "docker run -d --restart=always -p 8080:3000 --name beleap-blog beleap/beleap-blog" >> run.sh
                       chmod +x ./run.sh
