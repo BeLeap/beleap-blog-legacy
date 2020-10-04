@@ -12,37 +12,19 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v2
-            - name: Setup Node
-              uses: actions/setup-node@v1
+            - name: Login to docker hub
+              uses: actions-hub/docker/login@master
+              env:
+                  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+                  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+            - name: Build :latest
+              run: docker build -t ${GITHUB_REPOSITORY}:latest .
+
+            - name: Push to docker hub :latest
+              uses: actions-hub/docker@master
               with:
-                  node-version: '12'
-            - name: Install Dependencies
-              run: yarn
-            - name: Check Buildability
-              run: yarn build
-            - name: Install Dependencies on Server
-              uses: appleboy/ssh-action@master
-              with:
-                  host: ${{secrets.HOST}}
-                  username: ${{secrets.USERNAME}}
-                  key: ${{secrets.KEY}}
-                  port: ${{secrets.PORT}}
-                  timeout: 200m
-                  script: |
-                      cd ~/beleap-blog
-                      git pull
-                      yarn install --timeout 1000000
-            - name: Build Blog
-              uses: appleboy/ssh-action@master
-              with:
-                  host: ${{secrets.HOST}}
-                  username: ${{secrets.USERNAME}}
-                  key: ${{secrets.KEY}}
-                  port: ${{secrets.PORT}}
-                  timeout: 200m
-                  script: |
-                      cd ~/beleap-blog
-                      yarn build
+                  args: push ${GITHUB_REPOSITORY}:latestd
             - name: Run Blog
               uses: appleboy/ssh-action@master
               with:
@@ -51,6 +33,4 @@ jobs:
                   key: ${{secrets.KEY}}
                   port: ${{secrets.PORT}}
                   timeout: 200m
-                  script: |
-                      cd ~/beleap-blog
-                      yarn prod
+                  script: docker run -d -p 8080:3000 --name beleap-blog beleap/beleap-blog
