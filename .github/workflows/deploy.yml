@@ -40,7 +40,7 @@ jobs:
                       echo "else" >> run.sh
                       echo "    docker rm --force beleap-blog" >> run.sh
                       echo "fi" >> run.sh
-                      echo "docker pull beleap-blog" >> run.sh
+                      echo "docker pull beleap/beleap-blog" >> run.sh
                       echo "docker run -d --restart=always -p 8080:3000 --name beleap-blog beleap/beleap-blog" >> run.sh
                       chmod +x ./run.sh
                       ./run.sh
