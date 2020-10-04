@@ -6,8 +6,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "preprod": "cross-env NODE_ENV=production yarn build",
-        "prod": "cross-env NODE_ENV=production pm2 startOrReload ecosystem.config.yml"
+        "preprod": "yarn build",
+        "prod": "pm2 startOrReload ecosystem.config.yml"
     },
     "dependencies": {
         "classnames": "^2.2.6",

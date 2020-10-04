@@ -3,6 +3,3 @@ apps:
       name: 'beleap-blog'
       instances: 1
       watch: true
-      env:
-          NODE_ENV: 'production'
-      exec_mode: 'cluster'
