@@ -34,7 +34,7 @@ jobs:
                   port: ${{secrets.PORT}}
                   timeout: 200m
                   script: |
-                      echo "if [ -z $(docker ps --all | grep beleap-blog)]" > run.sh
+                      echo "if [ -z \$(docker ps --all | grep beleap-blog)]" > run.sh
                       echo "then" >> run.sh
                       echo "    docker rm --force beleap-blog" >> run.sh
                       echo "else" >> run.sh
