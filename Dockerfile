@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:14
 WORKDIR /beleap-blog
 
 RUN yarn global add next
