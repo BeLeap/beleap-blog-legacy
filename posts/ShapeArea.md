@@ -10,6 +10,8 @@ date: '2020-12-10'
 
 # Code
 
+
+```hasekell
 getOneFloor :: Int -> Int
 getOneFloor n = 2 * n - 1
 
@@ -19,6 +21,6 @@ sumOfTri 1 = 1
 sumOfTri n = (getOneFloor n) + (sumOfTri (n - 1))
 
 shapeArea n =  (sumOfTri n) + (sumOfTri (n - 1))
-```hasekell
-
 ```
+
+`getOneFloor`가 (2n + 1), (2(n - 1) + 1), ... 의 합을 계산해주고 `sumOfTri`가 위와 아래인 n, n - 1의 합을 구해 결과를 계산한다.
