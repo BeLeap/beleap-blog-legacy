@@ -16,7 +16,10 @@ proc2 (x:xs) prev = [prev, x]:(proc2 xs x)
 
 proc3 :: [[Int]] -> Int -> Int
 proc3 [[]] max = max
-proc3 ((x:(x2:[])):xs) max = if x * x2 > max then proc3 xs (x * x2) else proc3 xs max
+proc3 ((x:(x2:[])):xs) max = 
+    if x * x2 > max
+    then proc3 xs (x * x2)
+    else proc3 xs max
 
 proc :: [Int] -> Int
 proc [] = 0
