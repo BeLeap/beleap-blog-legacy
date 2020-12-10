@@ -7,7 +7,8 @@
         "build": "next build",
         "start": "next start",
         "preprod": "yarn build",
-        "prod": "pm2 startOrReload ecosystem.config.yml"
+        "prod": "pm2 startOrReload ecosystem.config.yml",
+        "export": "next export"
     },
     "dependencies": {
         "classnames": "^2.2.6",
