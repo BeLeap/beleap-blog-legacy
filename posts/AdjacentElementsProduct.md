@@ -3,7 +3,7 @@ date: '2020-12-10'
 title: 'adjacentElementsProduct feat.Haskell'
 ---
 
-# Method
+# Analysis
 
 인접한 두 element의 곱을 저장한 Array를 만들고 그 Array에서 최대값을 찾는다.
 
