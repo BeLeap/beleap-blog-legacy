@@ -3,6 +3,9 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
+import { useEffect } from 'react';
+import Prism from 'prismjs';
+
 const name = 'BeLeap';
 export const siteTitle = 'BeLeap Blog';
 
@@ -13,6 +16,10 @@ export default function Layout({
     children: React.ReactNode;
     home?: boolean;
 }) {
+    useEffect(() => {
+        Prism.highlightAll();
+    }, []);
+
     return (
         <div className={styles.container}>
             <Head>

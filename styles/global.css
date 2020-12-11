@@ -1,3 +1,5 @@
+@import '~fontsource-cascadia-code/index.css';
+
 html,
 body {
     padding: 0;
@@ -24,4 +26,8 @@ a:hover {
 img {
     max-width: 100%;
     display: block;
+}
+
+code {
+    font-family: 'Cascadia Code PL' !important;
 }
