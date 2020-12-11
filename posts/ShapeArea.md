@@ -13,8 +13,8 @@ A 1-interesting polygon is just a square with a side of length 1. An n-interesti
 
 # Analysis
 
-전체 네모 개수의 합은 위쪽 삼각형 네모의 개수 아래쪽 삼각형 네모 개수의 합과 같다.
-$n$번째 위쪽 삼각형 네모 개수는 $\sum_{i = 0}^{n}(2i + 1)$ 이고 $n$번째 아래쪽 삼각형 네모 개수는 $\sum_{i = 1}^{n}(2i - 1)$이다.
+전체 네모 개수의 합은 위쪽 삼각형 네모의 개수와 아래쪽 삼각형 네모 개수의 합과 같다.
+$n$번째 위쪽 삼각형 네모 개수는 $\sum_{i = 0}^{n}(2i + 1)$이고 $n$번째 아래쪽 삼각형 네모 개수는 $\sum_{i = 1}^{n}(2i - 1)$이다.
 
 # Code
 
