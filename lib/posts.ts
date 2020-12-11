@@ -1,9 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import remark from 'remark';
-import html from 'remark-html';
-import prism from './codeHightlight';
+
+import unified from 'unified';
+import markdown from 'remark-parse';
+import remark2rehype from 'remark-rehype';
+import html from 'rehype-stringify';
+import math from 'remark-math';
+import katex from 'rehype-katex';
+import prism from 'remark-prism';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -56,10 +61,14 @@ export async function getPostData(id: string) {
     const matterResult = matter(fileContents);
 
     // Use remark to convert markdown into HTML string
-    const processedContent = await remark()
+    const processedContent = unified()
+        .use(markdown)
+        .use(math)
         .use(prism)
+        .use(remark2rehype)
+        .use(katex)
         .use(html)
-        .process(matterResult.content);
+        .processSync(matterResult.content);
     const contentHtml = processedContent.toString();
 
     // Combine the data with the id and contentHtml
