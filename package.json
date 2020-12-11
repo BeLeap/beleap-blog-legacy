@@ -14,7 +14,7 @@
         "date-fns": "^2.16.1",
         "fontsource-cascadia-code": "^3.1.5",
         "gray-matter": "^4.0.2",
-        "next": "9.5.4",
+        "next": "10.0.3",
         "postcss-flexbugs-fixes": "^4.2.1",
         "postcss-preset-env": "^6.7.0",
         "prismjs": "^1.22.0",
