@@ -35,4 +35,4 @@ proc lst =
 adjacentElementsProduct inputArray = proc inputArray
 ```
 
-proc2가 인접한 element의 리스트를 만들고 proc3가 곱했을 때 최대값이 나오는 것을 찾는다.
+`proc2`가 인접한 element의 리스트를 만들고 `proc3`가 곱했을 때 최대값이 나오는 것을 찾는다.
