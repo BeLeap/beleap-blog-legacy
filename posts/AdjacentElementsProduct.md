@@ -3,6 +3,10 @@ date: '2020-12-10'
 title: 'AdjacentElementsProduct feat.Haskell'
 ---
 
+# Problem
+
+Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
+
 # Analysis
 
 인접한 두 element의 곱을 저장한 Array를 만들고 그 Array에서 최대값을 찾는다.
