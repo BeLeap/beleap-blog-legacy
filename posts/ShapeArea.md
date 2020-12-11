@@ -11,7 +11,7 @@ date: '2020-12-10'
 # Code
 
 
-```hasekell
+```haskell
 getOneFloor :: Int -> Int
 getOneFloor n = 2 * n - 1
 

@@ -1,6 +1,6 @@
 ---
-date: 2020-12-10
-title: AdjacentElementsProduct feat.Haskell
+date: '2020-12-10'
+title: 'AdjacentElementsProduct feat.Haskell'
 ---
 
 # Analysis
@@ -9,7 +9,7 @@ title: AdjacentElementsProduct feat.Haskell
 
 # Code
 
-``` {.haskell}
+```haskell
 proc2 :: [Int] -> Int -> [[Int]]
 proc2 [] _ = [[]]
 proc2 (x:xs) prev = [prev, x]:(proc2 xs x)
