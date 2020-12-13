@@ -29,36 +29,37 @@ const summarize = async (content: string): Promise<string> => {
 };
 
 const makePostData = async (fileNames: string[]): Promise<postData[]> => {
-    const allPostsData = [];
-    fileNames.map((fileName) => {
-        // Remove ".md" from file name to get id
-        const id = fileName.replace(/\.md$/, '');
+    const allPostsData = await Promise.all(
+        fileNames.map(async (fileName) => {
+            // Remove ".md" from file name to get id
+            const id = fileName.replace(/\.md$/, '');
 
-        // Read markdown file as string
-        const fullPath = path.join(postsDirectory, fileName);
-        const fileContents = fs.readFileSync(fullPath, 'utf8');
+            // Read markdown file as string
+            const fullPath = path.join(postsDirectory, fileName);
+            const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-        // Use gray-matter to parse the post metadata section
-        const matterResult = matter(fileContents);
-        const summary = summarize(matterResult.content);
+            // Use gray-matter to parse the post metadata section
+            const matterResult = matter(fileContents);
+            const summary = await summarize(matterResult.content);
 
-        const summarizedArticle = unified()
-            .use(markdown)
-            .use(math)
-            .use(prism)
-            .use(remark2rehype)
-            .use(katex)
-            .use(html)
-            .processSync(summary)
-            .toString();
+            const summarizedArticle = unified()
+                .use(markdown)
+                .use(math)
+                .use(prism)
+                .use(remark2rehype)
+                .use(katex)
+                .use(html)
+                .processSync(summary)
+                .toString();
 
-        // Combine the data with the id
-        allPostsData.push({
-            id,
-            summary: summarizedArticle,
-            ...(matterResult.data as { date: string; title: string }),
-        });
-    });
+            // Combine the data with the id
+            return {
+                id,
+                summary: summarizedArticle,
+                ...(matterResult.data as { date: string; title: string }),
+            };
+        }),
+    );
     return allPostsData;
 };
 
