@@ -6,6 +6,8 @@ import Link from 'next/link';
 import Date from '../components/date';
 import { GetStaticProps } from 'next';
 
+import { Card } from 'primereact/card';
+
 export default function Home({
     allPostsData,
 }: {
@@ -26,7 +28,7 @@ export default function Home({
                 <h2 className={utilStyles.headingLg}>Articles</h2>
                 <ul className={utilStyles.list}>
                     {allPostsData.map(({ id, date, title }) => (
-                        <li className={utilStyles.listItem} key={id}>
+                        <Card key={id}>
                             <Link href={`/posts/${id}`}>
                                 <a>{title}</a>
                             </Link>
@@ -34,7 +36,7 @@ export default function Home({
                             <small className={utilStyles.lightText}>
                                 <Date dateString={date} />
                             </small>
-                        </li>
+                        </Card>
                     ))}
                 </ul>
             </section>

@@ -17,7 +17,6 @@
         "next": "10.0.3",
         "postcss-flexbugs-fixes": "^5.0.1",
         "postcss-preset-env": "^6.7.0",
-        "primeflex": "^2.0.0",
         "primeicons": "^4.1.0",
         "primereact": "^5.0.2",
         "prismjs": "^1.22.0",
