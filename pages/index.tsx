@@ -28,10 +28,7 @@ export default function Home({
                 <h2 className={utilStyles.headingLg}>Articles</h2>
                 <ul className={utilStyles.list}>
                     {allPostsData.map(({ id, date, title }) => (
-                        <Card key={id}>
-                            <Link href={`/posts/${id}`}>
-                                <a>{title}</a>
-                            </Link>
+                        <Card key={id} title={title}>
                             <br />
                             <small className={utilStyles.lightText}>
                                 <Date dateString={date} />
