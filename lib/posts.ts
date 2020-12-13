@@ -9,6 +9,7 @@ import html from 'rehype-stringify';
 import math from 'remark-math';
 import katex from 'rehype-katex';
 import prism from 'remark-prism';
+import gfm from 'remark-gfm';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -65,6 +66,7 @@ export async function getPostData(id: string) {
         .use(markdown)
         .use(math)
         .use(prism)
+        .use(gfm)
         .use(remark2rehype)
         .use(katex)
         .use(html)
