@@ -2,6 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
+import { SummarizerManager } from 'node-summarizer';
+import util from 'util';
+
 import unified from 'unified';
 import markdown from 'remark-parse';
 import remark2rehype from 'remark-rehype';
@@ -12,10 +15,22 @@ import prism from 'remark-prism';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
-export function getSortedPostsData() {
-    // Get file names under /posts
-    const fileNames = fs.readdirSync(postsDirectory);
-    const allPostsData = fileNames.map((fileName) => {
+interface postData {
+    id: string;
+    title: string;
+    date: string;
+    summary: string;
+}
+
+const summarize = async (content: string): Promise<string> => {
+    const summarizer = new SummarizerManager(content, 1);
+    const summary = await summarizer.getSummaryByRank();
+    return summary.summary;
+};
+
+const makePostData = async (fileNames: string[]): Promise<postData[]> => {
+    const allPostsData = [];
+    fileNames.map((fileName) => {
         // Remove ".md" from file name to get id
         const id = fileName.replace(/\.md$/, '');
 
@@ -25,13 +40,32 @@ export function getSortedPostsData() {
 
         // Use gray-matter to parse the post metadata section
         const matterResult = matter(fileContents);
+        const summary = summarize(matterResult.content);
+
+        const summarizedArticle = unified()
+            .use(markdown)
+            .use(math)
+            .use(prism)
+            .use(remark2rehype)
+            .use(katex)
+            .use(html)
+            .processSync(summary)
+            .toString();
 
         // Combine the data with the id
-        return {
+        allPostsData.push({
             id,
+            summary: summarizedArticle,
             ...(matterResult.data as { date: string; title: string }),
-        };
+        });
     });
+    return allPostsData;
+};
+
+export const getSortedPostsData = async () => {
+    // Get file names under /posts
+    const fileNames = fs.readdirSync(postsDirectory);
+    const allPostsData = await makePostData(fileNames);
     // Sort posts by date
     return allPostsData.sort((a, b) => {
         if (a.date < b.date) {
@@ -40,7 +74,7 @@ export function getSortedPostsData() {
             return -1;
         }
     });
-}
+};
 
 export function getAllPostIds() {
     const fileNames = fs.readdirSync(postsDirectory);

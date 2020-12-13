@@ -15,6 +15,7 @@ export default function Home({
         date: string;
         title: string;
         id: string;
+        summary: string;
     }[];
 }) {
     return (
@@ -27,9 +28,12 @@ export default function Home({
             >
                 <h2 className={utilStyles.headingLg}>Articles</h2>
                 <ul className={utilStyles.list}>
-                    {allPostsData.map(({ id, date, title }) => (
+                    {allPostsData.map(({ id, date, title, summary }) => (
                         <Card key={id} title={title}>
                             <br />
+                            <div
+                                dangerouslySetInnerHTML={{ __html: summary }}
+                            />
                             <small className={utilStyles.lightText}>
                                 <Date dateString={date} />
                             </small>
@@ -42,7 +46,7 @@ export default function Home({
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const allPostsData = getSortedPostsData();
+    const allPostsData = await getSortedPostsData();
     return {
         props: {
             allPostsData,
