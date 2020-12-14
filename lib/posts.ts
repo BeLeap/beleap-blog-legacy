@@ -23,9 +23,14 @@ interface postData {
 }
 
 const summarize = async (content: string): Promise<string> => {
-    const summarizer = new SummarizerManager(content, 1);
-    const summary = await summarizer.getSummaryByRank();
-    return summary.summary.substring(0, 150) + ' ...';
+    try {
+        const summarizer = new SummarizerManager(content, 1);
+        const summary = await summarizer.getSummaryByRank();
+        return summary.summary.substring(0, 150) + ' ...';
+    } catch (err) {
+        console.log(err);
+        return '';
+    }
 };
 
 const processMarkdown = (content: string) => {

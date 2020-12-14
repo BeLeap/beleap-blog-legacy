@@ -20,6 +20,7 @@ const cardFooter = (id) => {
 
 const SummaryArea = styled.div`
     color: gray !important;
+    font-size: 10px !important;
 `;
 
 export default function Home({
