@@ -3,7 +3,6 @@ import path from 'path';
 import matter from 'gray-matter';
 
 import { SummarizerManager } from 'node-summarizer';
-import util from 'util';
 
 import unified from 'unified';
 import markdown from 'remark-parse';
@@ -26,7 +25,20 @@ interface postData {
 const summarize = async (content: string): Promise<string> => {
     const summarizer = new SummarizerManager(content, 1);
     const summary = await summarizer.getSummaryByRank();
-    return summary.summary;
+    return summary.summary.substring(0, 150) + ' ...';
+};
+
+const processMarkdown = (content: string) => {
+    return unified()
+        .use(markdown)
+        .use(math)
+        .use(prism)
+        .use(gfm)
+        .use(remark2rehype)
+        .use(katex)
+        .use(html)
+        .processSync(content)
+        .toString();
 };
 
 const makePostData = async (fileNames: string[]): Promise<postData[]> => {
@@ -43,15 +55,7 @@ const makePostData = async (fileNames: string[]): Promise<postData[]> => {
             const matterResult = matter(fileContents);
             const summary = await summarize(matterResult.content);
 
-            const summarizedArticle = unified()
-                .use(markdown)
-                .use(math)
-                .use(prism)
-                .use(remark2rehype)
-                .use(katex)
-                .use(html)
-                .processSync(summary)
-                .toString();
+            const summarizedArticle = processMarkdown(summary);
 
             // Combine the data with the id
             return {
@@ -97,16 +101,7 @@ export async function getPostData(id: string) {
     const matterResult = matter(fileContents);
 
     // Use remark to convert markdown into HTML string
-    const processedContent = unified()
-        .use(markdown)
-        .use(math)
-        .use(prism)
-        .use(gfm)
-        .use(remark2rehype)
-        .use(katex)
-        .use(html)
-        .processSync(matterResult.content);
-    const contentHtml = processedContent.toString();
+    const contentHtml = processMarkdown(matterResult.content);
 
     // Combine the data with the id and contentHtml
     return {
