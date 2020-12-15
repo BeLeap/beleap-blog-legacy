@@ -1,0 +1,24 @@
+{
+    "cSpell.words": [
+        "Baseband",
+        "Companding",
+        "Compansion",
+        "DSSS",
+        "Gbps",
+        "IFFT",
+        "LFSR",
+        "MIMO",
+        "Mbps",
+        "Nyquist",
+        "OFDM",
+        "Passband",
+        "Quantizer",
+        "katex",
+        "primereact",
+        "rehype",
+        "rightarrow"
+    ],
+    "[markdown]": {
+        "editor.formatOnSave": false
+    }
+}
