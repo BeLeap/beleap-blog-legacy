@@ -20,7 +20,7 @@ $$
     * $= c \times T = \frac{c}{f}$
         * propagation speed(speed of light $c$) $\times$ period
 * bit length
-    * 한 개의 비트가 전송할 때 매체이서 차지하는 거리
+    * 한 개의 비트가 전송할 때 매체에서 차지하는 거리
     * propagation speed $\times$ bit duration
     * 전자(electron)의 propagation speed는 $\frac{2}{3}c$
     * bit duration = $\frac{1}{N} (N = $ bit rate $)$
@@ -53,7 +53,7 @@ $$
 * 3bit를 $f = 0, \frac{N}{4}, \frac{N}{2}$로 모두 표현할 수 있음
     * 따라서 보통 bandwidth는 data rate의 절반으로 계산함
 
-# Fourier ananlysis and Fourier Trnasform
+# Fourier analysis and Fourier Transform
 
 time domain을 frequency domain으로 변경
 
