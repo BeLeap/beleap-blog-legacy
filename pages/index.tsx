@@ -20,7 +20,6 @@ const cardFooter = (id) => {
 
 const SummaryArea = styled.div`
     color: gray !important;
-    font-size: 10px !important;
 `;
 
 export default function Home({
@@ -46,13 +45,7 @@ export default function Home({
                     {allPostsData.map(({ id, date, title, summary }) => (
                         <Card key={id} title={title} footer={cardFooter(id)}>
                             <br />
-                            <SummaryArea>
-                                <div
-                                    dangerouslySetInnerHTML={{
-                                        __html: summary,
-                                    }}
-                                />
-                            </SummaryArea>
+                            <SummaryArea>{summary}</SummaryArea>
                             <small className={utilStyles.lightText}>
                                 <Date dateString={date} />
                             </small>

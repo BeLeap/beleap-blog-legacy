@@ -28,8 +28,7 @@ const summarize = async (content: string): Promise<string> => {
         const summary = await summarizer.getSummaryByRank();
         return summary.summary.substring(0, 150) + ' ...';
     } catch (err) {
-        console.log(err);
-        return '';
+        return content.substring(0, 150) + ' ...';
     }
 };
 
@@ -58,14 +57,17 @@ const makePostData = async (fileNames: string[]): Promise<postData[]> => {
 
             // Use gray-matter to parse the post metadata section
             const matterResult = matter(fileContents);
-            const summary = await summarize(matterResult.content);
-
-            const summarizedArticle = processMarkdown(summary);
+            const summary = await summarize(
+                matterResult.content
+                    .replace(/#/g, ' ')
+                    .replace(/\$/g, '')
+                    .replace(/\*/g, ' '),
+            );
 
             // Combine the data with the id
             return {
                 id,
-                summary: summarizedArticle,
+                summary,
                 ...(matterResult.data as { date: string; title: string }),
             };
         }),
