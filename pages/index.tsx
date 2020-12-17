@@ -43,7 +43,12 @@ export default function Home({
                 <h2 className={utilStyles.headingLg}>Articles</h2>
                 <ul className={utilStyles.list}>
                     {allPostsData.map(({ id, date, title, summary }) => (
-                        <Card key={id} title={title} footer={cardFooter(id)}>
+                        <Card
+                            key={id}
+                            title={title}
+                            footer={cardFooter(id)}
+                            style={{ marginBottom: '20px' }}
+                        >
                             <br />
                             <SummaryArea>{summary}</SummaryArea>
                             <small className={utilStyles.lightText}>
