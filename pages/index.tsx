@@ -9,12 +9,18 @@ import styled from 'styled-components';
 
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
+import { Fieldset } from 'primereact/fieldset';
 
 const cardFooter = (id) => {
     return (
-        <Link href={`/posts/${id}`}>
-            <Button label="Read" />
-        </Link>
+        <div
+            className="p-d-inline-flex p-flex-row-reverse"
+            style={{ width: '100%' }}
+        >
+            <Link href={`/posts/${id}`}>
+                <Button label="Read" />
+            </Link>
+        </div>
     );
 };
 
@@ -37,11 +43,8 @@ export default function Home({
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <section
-                className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}
-            >
-                <h2 className={utilStyles.headingLg}>Articles</h2>
-                <ul className={utilStyles.list}>
+            <Fieldset legend="Articles">
+                <div className="p-d-flex p-flex-column">
                     {allPostsData.map(({ id, date, title, summary }) => (
                         <Card
                             key={id}
@@ -56,8 +59,8 @@ export default function Home({
                             </small>
                         </Card>
                     ))}
-                </ul>
-            </section>
+                </div>
+            </Fieldset>
         </Layout>
     );
 }
