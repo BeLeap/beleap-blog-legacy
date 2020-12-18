@@ -64,52 +64,50 @@ date: '2020-12-13'
 ## Unipolar RZ/NRZ
 
 * RZ
-![RZ](/images/PhysicalLayerDigitalSignal/unipolar_rz.png)
-![RZ PSD](/images/PhysicalLayerDigitalSignal/unipolar_rz_psd.png)
-
     * 0Hz에 spike가 있음: long term DC effect
     * 0Hz 근처에 몰려있음: short term DC effect(baseline wander)
     * -2 - +2까지 사용: bandwidth가 큰 편
     * bit period 중 최소한 절반은 항상 baseline에 있음
     * $+V$에서 $0$으로 떨어지는 곳을 이용해 clocking(sync)함
-* NRZ
-![NRZ](/images/PhysicalLayerDigitalSignal/unipolar_nrz.png)
-![NRZ PSD](/images/PhysicalLayerDigitalSignal/unipolar_nrz_psd.png)
+![RZ](/images/PhysicalLayerDigitalSignal/unipolar_rz.png)
+![RZ PSD](/images/PhysicalLayerDigitalSignal/unipolar_rz_psd.png)
 
+* NRZ
     * 0Hz에 spike가 있음: long term DC effect
     * 0Hz 근처에 몰려있음: short term DC effect
     * clocking 없음
     * 연속된 0 또는 1을 보낼 수 없음
+![NRZ](/images/PhysicalLayerDigitalSignal/unipolar_nrz.png)
+![NRZ PSD](/images/PhysicalLayerDigitalSignal/unipolar_nrz_psd.png)
 
 ## Polar RZ/NRZ
 
 * RZ
+    * unipolar rz와 같지만 spike가 없음
 ![RZ](/images/PhysicalLayerDigitalSignal/polar_rz.png)
 ![RZ PSD](/images/PhysicalLayerDigitalSignal/polar_rz_psd.png)
 
-    * unipolar rz와 같지만 spike가 없음
 * NRZ(NRZ-L)
+    * unipolar nrz와 같지만 spike가 없음
 ![NRZ](/images/PhysicalLayerDigitalSignal/polar_nrz.png)
 ![NRZ PSD](/images/PhysicalLayerDigitalSignal/polar_nrz_psd.png)
 
-    * unipolar nrz와 같지만 spike가 없음
 * NRZ-L, NRZ-M(NRZ-I), NRZ-S
 ![Type of Polar NRZ](/images/PhysicalLayerDigitalSignal/type_of_polar_nrz.png)
 
 ## Bipolar RZ/NRZ
 
 * RZ-AMI
+    * DC Component, baseline wander 모두 없음
 ![RZ](/images/PhysicalLayerDigitalSignal/bipolar_rz.png)
 ![RZ PSD](/images/PhysicalLayerDigitalSignal/bipolar_rz_psd.png)
 
-    * DC Component, baseline wander 모두 없음
 * NRZ-AMI
-![NRZ](/images/PhysicalLayerDigitalSignal/bipolar_nrz.png)
-![NRZ PSD](/images/PhysicalLayerDigitalSignal/bipolar_nrz_psd.png)
-
     * DC Component, baseline wander 모두 없음
     * 연속된 0을 보내지 못함
     * single bit error detection이 가능함
+![NRZ](/images/PhysicalLayerDigitalSignal/bipolar_nrz.png)
+![NRZ PSD](/images/PhysicalLayerDigitalSignal/bipolar_nrz_psd.png)
 
 ## Manchester encoding
 
