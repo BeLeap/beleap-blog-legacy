@@ -66,6 +66,7 @@ date: '2020-12-13'
 * RZ
 ![RZ](/images/PhysicalLayerDigitalSignal/unipolar_rz.png)
 ![RZ PSD](/images/PhysicalLayerDigitalSignal/unipolar_rz_psd.png)
+
     * 0Hz에 spike가 있음: long term DC effect
     * 0Hz 근처에 몰려있음: short term DC effect(baseline wander)
     * -2 - +2까지 사용: bandwidth가 큰 편
@@ -74,6 +75,7 @@ date: '2020-12-13'
 * NRZ
 ![NRZ](/images/PhysicalLayerDigitalSignal/unipolar_nrz.png)
 ![NRZ PSD](/images/PhysicalLayerDigitalSignal/unipolar_nrz_psd.png)
+
     * 0Hz에 spike가 있음: long term DC effect
     * 0Hz 근처에 몰려있음: short term DC effect
     * clocking 없음
@@ -84,10 +86,12 @@ date: '2020-12-13'
 * RZ
 ![RZ](/images/PhysicalLayerDigitalSignal/polar_rz.png)
 ![RZ PSD](/images/PhysicalLayerDigitalSignal/polar_rz_psd.png)
+
     * unipolar rz와 같지만 spike가 없음
 * NRZ(NRZ-L)
 ![NRZ](/images/PhysicalLayerDigitalSignal/polar_nrz.png)
 ![NRZ PSD](/images/PhysicalLayerDigitalSignal/polar_nrz_psd.png)
+
     * unipolar nrz와 같지만 spike가 없음
 * NRZ-L, NRZ-M(NRZ-I), NRZ-S
 ![Type of Polar NRZ](/images/PhysicalLayerDigitalSignal/type_of_polar_nrz.png)
@@ -97,10 +101,12 @@ date: '2020-12-13'
 * RZ-AMI
 ![RZ](/images/PhysicalLayerDigitalSignal/bipolar_rz.png)
 ![RZ PSD](/images/PhysicalLayerDigitalSignal/bipolar_rz_psd.png)
+
     * DC Component, baseline wander 모두 없음
 * NRZ-AMI
 ![NRZ](/images/PhysicalLayerDigitalSignal/bipolar_nrz.png)
 ![NRZ PSD](/images/PhysicalLayerDigitalSignal/bipolar_nrz_psd.png)
+
     * DC Component, baseline wander 모두 없음
     * 연속된 0을 보내지 못함
     * single bit error detection이 가능함
@@ -108,6 +114,7 @@ date: '2020-12-13'
 ## Manchester encoding
 
 ![Manchester Encoding](/images/PhysicalLayerDigitalSignal/manchester_encoding.png)
+
 * 같은 비트가 연속으로 나오면 transition이 일어남
 * bit period 중간에 0이면 음의 방향으로 transition, 1이면 양의 방향으로 transition(반대도 사용됨)
 * bit period 중간에는 항상 transition이 일어나고 bit period 시작에 0이면 transition, 1이면 transition을 하지 않는 differential manchester encoding
