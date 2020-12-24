@@ -2192,10 +2192,10 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-fontsource-cascadia-code@^3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/fontsource-cascadia-code/-/fontsource-cascadia-code-3.1.5.tgz#f02388833d677b6a8a1b5396d5b454feaaae09e2"
-  integrity sha512-nceOy+9IuHbJKEeu6VMpAuPe5b7wzbUqhxPfJ44xwxzolonWCzr4nn8JSvKU9P+2p9XtRLRxc5Zap1UJyimYsQ==
+fontsource-cascadia-code@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/fontsource-cascadia-code/-/fontsource-cascadia-code-4.0.0.tgz#fb98f4c687f98bb8bda55057ea885c5fb143e1e5"
+  integrity sha512-UbXh5MSbdJKaRHUWikeFC7w4ifg5riEUp0LM9to1KnH6PbxXNB4A6B74GADaFWZwo3wifDnWbBszau0dV/WcYQ==
 
 for-in@^1.0.2:
   version "1.0.2"
