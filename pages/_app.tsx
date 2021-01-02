@@ -1,4 +1,4 @@
-import '../styles/global.css';
+import '../styles/global.scss';
 import { AppProps } from 'next/app';
 import '../styles/prism-nord.css';
 import '../styles/katex.min.css';

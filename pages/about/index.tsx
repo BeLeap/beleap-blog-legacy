@@ -1,13 +1,15 @@
 import Head from 'next/head';
-import Layout from '../../components/layout';
+import Header from '../../components/Header';
 
 const About = () => {
     return (
-        <Layout>
+        <>
+            <Header activeItem="About" />
             <Head>
                 <title>About BeLeap</title>
             </Head>
-        </Layout>
+            Under Construction
+        </>
     );
 };
 export default About;

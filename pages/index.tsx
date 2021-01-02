@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
-import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
@@ -9,9 +7,9 @@ import styled from 'styled-components';
 
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
-import { Fieldset } from 'primereact/fieldset';
+import Header from '../components/Header';
 
-const cardFooter = (id) => {
+const cardFooter = (id: string) => {
     return (
         <div
             className="p-d-inline-flex p-flex-row-reverse"
@@ -39,29 +37,28 @@ export default function Home({
     }[];
 }) {
     return (
-        <Layout home>
+        <>
             <Head>
-                <title>{siteTitle}</title>
+                <title>BeLeap Blog</title>
             </Head>
-            <Fieldset legend="Articles">
-                <div className="p-d-flex p-flex-column">
-                    {allPostsData.map(({ id, date, title, summary }) => (
-                        <Card
-                            key={id}
-                            title={title}
-                            footer={cardFooter(id)}
-                            style={{ marginBottom: '20px' }}
-                        >
-                            <br />
-                            <SummaryArea>{summary}</SummaryArea>
-                            <small className={utilStyles.lightText}>
-                                <Date dateString={date} />
-                            </small>
-                        </Card>
-                    ))}
-                </div>
-            </Fieldset>
-        </Layout>
+            <Header activeItem="Article" />
+            <div className="p-d-flex p-flex-column">
+                {allPostsData.map(({ id, date, title, summary }) => (
+                    <Card
+                        key={id}
+                        title={title}
+                        footer={cardFooter(id)}
+                        style={{ margin: '20px' }}
+                    >
+                        <br />
+                        <SummaryArea>{summary}</SummaryArea>
+                        <small>
+                            <Date dateString={date} />
+                        </small>
+                    </Card>
+                ))}
+            </div>
+        </>
     );
 }
 
