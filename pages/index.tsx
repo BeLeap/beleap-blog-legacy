@@ -41,7 +41,7 @@ export default function Home({
             <Head>
                 <title>BeLeap Blog</title>
             </Head>
-            <Header activeItem="Article" />
+            <Header/>
             <div className="p-d-flex p-flex-column">
                 {allPostsData.map(({ id, date, title, summary }) => (
                     <Card

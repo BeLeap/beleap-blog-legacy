@@ -4,7 +4,7 @@ import Header from '../../components/Header';
 const About = () => {
     return (
         <>
-            <Header activeItem="About" />
+            <Header />
             <Head>
                 <title>About BeLeap</title>
             </Head>
