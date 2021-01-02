@@ -21,9 +21,6 @@ const Header = () => {
                     { label: 'Articles', url: '/' },
                     { label: 'About', url: '/about' },
                 ]}
-                style={{
-                    marginBottom: '10px',
-                }}
                 activeItem={activeItem}
                 onTabChange={(event) =>
                     setActiveItem({ activeItem: event.value })
