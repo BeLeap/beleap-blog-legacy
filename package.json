@@ -14,7 +14,7 @@
         "date-fns": "^2.16.1",
         "fontsource-cascadia-code": "^4.0.0",
         "gray-matter": "^4.0.2",
-        "next": "10.0.4",
+        "next": "10.0.5",
         "node-summarizer": "^1.0.7",
         "postcss-flexbugs-fixes": "^5.0.1",
         "postcss-preset-env": "^6.7.0",
