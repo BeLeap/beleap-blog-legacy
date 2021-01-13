@@ -1,3 +1,4 @@
+import '@fontsource/cascadia-code'
 import '../styles/global.scss';
 import { AppProps } from 'next/app';
 import '../styles/prism-nord.css';

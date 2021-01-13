@@ -9,10 +9,10 @@
         "export": "next export"
     },
     "dependencies": {
+        "@fontsource/cascadia-code": "^4.1.0",
         "classnames": "^2.2.6",
         "cross-env": "^7.0.2",
         "date-fns": "^2.16.1",
-        "fontsource-cascadia-code": "^4.0.0",
         "gray-matter": "^4.0.2",
         "next": "10.0.5",
         "node-summarizer": "^1.0.7",
