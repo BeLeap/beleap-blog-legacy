@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -19,8 +20,8 @@
     "primeflex": "^2.0.0",
     "primeicons": "^4.1.0",
     "primereact": "^6.0.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "rehype-katex": "^4.0.0",
     "rehype-stringify": "^8.0.0",
     "remark-gfm": "^1.0.0",
