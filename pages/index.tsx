@@ -1,4 +1,5 @@
 // import Date from '../components/date';
+import { format, parseISO } from 'date-fns';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -8,12 +9,10 @@ import styled from 'styled-components';
 import Header from '../components/Header';
 import { getSortedPostsData } from '../lib/posts';
 
-const cardFooter = (id: string) => {
+const cardFooter = (id: string, date: string) => {
   return (
-    <div
-      className="p-d-inline-flex p-flex-row-reverse"
-      style={{ width: '100%' }}
-    >
+    <div className="p-d-inline-flex p-jc-between" style={{ width: '100%' }}>
+      <time dateTime={date}>{format(parseISO(date), 'LLLL d, yyyy')}</time>
       <Link href={`/posts/${id}`}>
         <Button label="Read" />
       </Link>
@@ -25,7 +24,7 @@ const SummaryArea = styled.div`
   color: gray !important;
 `;
 
-export default function Home({
+const Posts = ({
   allPostsData,
 }: {
   allPostsData: {
@@ -34,7 +33,7 @@ export default function Home({
     id: string;
     summary: string;
   }[];
-}) {
+}) => {
   return (
     <>
       <Head>
@@ -52,18 +51,17 @@ export default function Home({
           <Card
             key={id}
             title={title}
-            footer={cardFooter(id)}
+            footer={cardFooter(id, date)}
             style={{ margin: '20px' }}
           >
             <br />
             <SummaryArea>{summary}</SummaryArea>
-            <small>{/* <Date dateString={date} /> */}</small>
           </Card>
         ))}
       </div>
     </>
   );
-}
+};
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = await getSortedPostsData();
@@ -73,3 +71,5 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
+
+export default Posts;
