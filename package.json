@@ -17,6 +17,8 @@
     "primereact": "^6.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "sass": "^1.32.4",
+    "styled-components": "^5.2.1",
     "url-loader": "^2.1.0"
   },
   "devDependencies": {
@@ -24,6 +26,7 @@
     "@types/react": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.13.0",
     "@typescript-eslint/parser": "^4.13.0",
+    "babel-plugin-styled-components": "^1.12.0",
     "eslint": "^7.17.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.1.0",

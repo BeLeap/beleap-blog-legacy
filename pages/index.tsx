@@ -1,13 +1,16 @@
 import { NextComponentType } from 'next/dist/next-server/lib/utils';
-import { Avatar } from 'primereact/avatar';
+import styled from 'styled-components';
 import Header from '../components/Header';
+
+const Wrapper = styled.div`
+  margin: 10px;
+`;
 
 const Index: NextComponentType = () => {
   return (
-    <>
-      <Avatar image="static/profile.png" size="xlarge" shape="circle" />
+    <Wrapper>
       <Header />
-    </>
+    </Wrapper>
   );
 };
 
