@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Button } from 'primereact/button';
 import { Card } from 'primereact/card';
 import styled from 'styled-components';
-import Header from '../components/Header';
+import Layout from '../components/Layout';
 import { getSortedPostsData } from '../lib/posts';
 
 const cardFooter = (id: string, date: string) => {
@@ -35,18 +35,11 @@ const Posts = ({
   }[];
 }) => {
   return (
-    <>
+    <Layout index={0}>
       <Head>
         <title>BeLeap Blog</title>
       </Head>
-      <Header />
-      <div
-        className="p-d-flex p-flex-column"
-        style={{
-          position: 'relative',
-          top: '130px',
-        }}
-      >
+      <div className="p-d-flex p-flex-column">
         {allPostsData.map(({ id, date, title, summary }) => (
           <Card
             key={id}
@@ -59,7 +52,7 @@ const Posts = ({
           </Card>
         ))}
       </div>
-    </>
+    </Layout>
   );
 };
 

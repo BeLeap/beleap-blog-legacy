@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   margin-left: 10px;
   margin-right: 10px;
   background-color: white;
+  top: 0px;
   width: 100vw;
 `;
 
@@ -36,8 +37,8 @@ const items = [
   },
 ];
 
-const Header = () => {
-  const [activeItem, setActiveItem] = useState(items[0]);
+const Header = ({ index }) => {
+  const [activeItem, setActiveItem] = useState(items[index]);
 
   return (
     <Wrapper>
