@@ -3,6 +3,8 @@
 body, html {
     height: 100%;
     font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
 }
 
 * {
@@ -10,6 +12,28 @@ body, html {
     margin: 0px;
 }
 
+ul {
+    list-style-type: disc !important;
+}
+
 .p-card-title {
     color: black;
+}
+
+a {
+    color: #0070f3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+code {
+    font-family: 'Cascadia Code PL' !important;
 }

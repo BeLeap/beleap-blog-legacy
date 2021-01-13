@@ -42,8 +42,20 @@ const Header = ({ index }) => {
 
   return (
     <Wrapper>
-      <Avatar image="/static/profile.png" shape="circle" size="xlarge" />
-      <Title>BeLeap Blog</Title>
+      <span
+        onClick={() => {
+          window.location.href = '/about';
+        }}
+      >
+        <Avatar image="/images/profile.png" shape="circle" size="xlarge" />
+      </span>
+      <Title
+        onClick={() => {
+          window.location.href = '/';
+        }}
+      >
+        BeLeap Blog
+      </Title>
       <TabMenu
         model={items}
         activeItem={activeItem}
