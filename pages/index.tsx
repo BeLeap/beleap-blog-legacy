@@ -45,7 +45,7 @@ export default function Home({
         className="p-d-flex p-flex-column"
         style={{
           position: 'relative',
-          top: '150px',
+          top: '130px',
         }}
       >
         {allPostsData.map(({ id, date, title, summary }) => (
