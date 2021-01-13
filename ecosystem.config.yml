@@ -1,5 +1,0 @@
-apps:
-    - script: yarn start
-      name: 'beleap-blog'
-      instances: 1
-      watch: true
