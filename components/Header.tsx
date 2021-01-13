@@ -5,6 +5,11 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   position: fixed;
+  z-index: 999;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: white;
+  width: 100vw;
 `;
 
 const Title = styled.span`
@@ -16,8 +21,19 @@ const Title = styled.span`
 `;
 
 const items = [
-  { label: 'Articles', icon: 'pi pi-align-left' },
-  { label: 'About' },
+  {
+    label: 'Articles',
+    icon: 'pi pi-align-left',
+    command: () => {
+      window.location.href = '/';
+    },
+  },
+  {
+    label: 'About',
+    command: () => {
+      window.location.href = '/about';
+    },
+  },
 ];
 
 const Header = () => {

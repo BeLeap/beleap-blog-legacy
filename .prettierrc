@@ -3,5 +3,19 @@
     "trailingComma": "all",
     "singleQuote": true,
     "parser": "typescript",
-    "endOfLine": "lf"
+    "endOfLine": "lf",
+    "overrides": [
+        {
+            "files": "*.tsx",
+            "options": {
+                "tabWidth": 2
+            }
+        },
+        {
+            "files": "*.ts",
+            "options": {
+                "tabWidth": 4
+            }
+        }
+    ]
 }
