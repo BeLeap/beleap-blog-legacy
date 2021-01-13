@@ -1,4 +1,4 @@
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 
 const About = () => {
   return <Layout index={1}>Hi</Layout>;
