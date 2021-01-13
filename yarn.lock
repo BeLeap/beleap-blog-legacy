@@ -4504,10 +4504,10 @@ primeicons@^4.1.0:
   resolved "https://registry.yarnpkg.com/primeicons/-/primeicons-4.1.0.tgz#19eaef8ef5594b0006358ae64e738d03e167c9bb"
   integrity sha512-uEv2pSPk1zQCfaB2VgnUfnUxxlGryYi+5rbdxmZBBt5v9S/pscIQYS5YDLxsQZ7D9jn5c76+Tx5wX/2J1nK6sA==
 
-primereact@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/primereact/-/primereact-5.0.2.tgz#4c3ed5ec55ab423c330952c4181ed34bccabebe1"
-  integrity sha512-CaseS/951XkHYuQ5flQg9gZn4TFJSlSMriLdbpub4wzMjHZPbVK0P5I4g/1d24KKT3ptCOwxrsvwus5B+UdhqA==
+primereact@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/primereact/-/primereact-6.0.0.tgz#9f47d5478fcef50fbb4a09c4986e9c20cdce0c26"
+  integrity sha512-89b6mAAR9U5OnJG49lWVK6DuCyIPm2v6YSwi3CCyekxrIZXbeDvmHNQtAWTeK8jmLPJ8dt8pdYPQa7Qesg/nAg==
 
 prismjs@^1.23.0:
   version "1.23.0"
