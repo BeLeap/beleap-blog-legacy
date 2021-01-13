@@ -2,7 +2,7 @@ import { TabMenu } from 'primereact/tabmenu';
 import { useState } from 'react';
 
 const items = [
-  { label: 'Articles', icon: 'pi pi-fw pi-align-left' },
+  { label: 'Articles', icon: 'pi pi-align-left' },
   { label: 'About' },
 ];
 
