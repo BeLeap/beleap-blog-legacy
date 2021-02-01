@@ -24,6 +24,7 @@ challenge.pdf를 다운받아서 일단 열어보았다.
 뭔가 파일인거 같은데 magic number가 PK이다.
 
 magic number가 PK인 파일은 xlsx 혹은 pptx이다.
+(+ 후에 선배님이 zip은 PK라고 말씀해주셨습니다.)
 
 따라서 저게 파일이 맞다고 가정하고 한번 추출을 해봤다.
 
