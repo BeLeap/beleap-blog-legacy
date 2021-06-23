@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-typescript-plus",
-  "description": "A starter kit for TypeScript-based Gatsby projects with sensible defaults.",
+  "name": "beleap-blog",
+  "description": "BeLeap blog built with gatsby",
   "version": "1.0.0",
   "private": true,
-  "author": "Resi Respati <resir014@gmail.com>",
+  "author": "Changseo Jang<changseo_jang@korea.ac.kr>",
   "keywords": [
     "gatsby"
   ],
