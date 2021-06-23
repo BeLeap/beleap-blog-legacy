@@ -5,7 +5,7 @@ import { colors, dimensions, heights } from '../styles/variables'
 import Container from './Container'
 
 const StyledHeader = styled.header`
-  height: ${heights.header}px;
+  height: ${heights.header}rem;
   width: 100%;
   padding: 0 ${dimensions.containerPadding}rem;
   background: rgba(255, 255, 255, 0.25);
@@ -27,7 +27,7 @@ const HeaderInner = styled(Container)`
 
 const HomepageLink = styled(Link)`
   color: ${colors.black};
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: 600;
 
   &:hover,

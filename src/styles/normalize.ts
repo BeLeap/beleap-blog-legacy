@@ -1,5 +1,5 @@
-import { dimensions, fonts, colors, breakpoints } from './variables'
 import { getEmSize } from './mixins'
+import { breakpoints, colors, dimensions, fonts } from './variables'
 
 export default `
   html {
@@ -23,7 +23,7 @@ export default `
     overflow-y: scroll;
     font-family: ${fonts.sansSerif};
     color: ${colors.black};
-    background-color: ${colors.white};
+    background-color: #e0e0e0;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
   }

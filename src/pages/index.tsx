@@ -9,7 +9,13 @@ const IndexPage = () => (
   <IndexLayout>
     <Page>
       <Container>
-        <h1>Lorem Ipsum</h1>
+        <h1
+          style={{
+            marginBottom: '1rem'
+          }}
+        >
+          Lorem Ipsum
+        </h1>
         <ArticleList />
         <Link to="/page-2/">Go to page 2</Link>
       </Container>
