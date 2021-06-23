@@ -1,16 +1,21 @@
-import * as React from 'react'
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import { Link } from 'gatsby'
-
-import { heights, dimensions, colors } from '../styles/variables'
+import * as React from 'react'
+import { colors, dimensions, heights } from '../styles/variables'
 import Container from './Container'
 
 const StyledHeader = styled.header`
   height: ${heights.header}px;
+  width: 100%;
   padding: 0 ${dimensions.containerPadding}rem;
-  background-color: ${colors.brand};
-  color: ${transparentize(0.5, colors.white)};
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 0 0 1rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  z-index: 999;
 `
 
 const HeaderInner = styled(Container)`
@@ -21,7 +26,7 @@ const HeaderInner = styled(Container)`
 `
 
 const HomepageLink = styled(Link)`
-  color: ${colors.white};
+  color: ${colors.black};
   font-size: 1.5rem;
   font-weight: 600;
 
