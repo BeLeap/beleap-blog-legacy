@@ -28,6 +28,10 @@ export default `
     -ms-text-size-adjust: 100%;
   }
 
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
   a {
     color: ${colors.brand};
     text-decoration: none;
