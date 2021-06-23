@@ -2,14 +2,14 @@ import * as React from 'react'
 
 interface ArticleCardProps {
   title: string
-  summary: string
+  excerpt: string
 }
 
-const ArticleCard: React.FC<ArticleCardProps> = ({ title, summary }) => {
+const ArticleCard: React.FC<ArticleCardProps> = ({ title, excerpt }) => {
   return (
     <div>
       <h1>{title}</h1>
-      <p>{summary}</p>
+      <p>{excerpt}</p>
     </div>
   )
 }
