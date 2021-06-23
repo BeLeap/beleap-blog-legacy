@@ -7,6 +7,9 @@ interface ArticleNode {
     title: string
   }
   excerpt: string
+  fields: {
+    slug: string
+  }
 }
 
 const ArticleList: React.FC<{}> = () => {
@@ -18,6 +21,9 @@ const ArticleList: React.FC<{}> = () => {
           frontmatter {
             title
           }
+          fields {
+            slug
+          }
         }
       }
     }
@@ -25,9 +31,9 @@ const ArticleList: React.FC<{}> = () => {
 
   return (
     <>
-      {data.allMarkdownRemark.nodes.map((node: ArticleNode) => (
-        <ArticleCard title={node.frontmatter.title} excerpt={node.excerpt} />
-      ))}
+      {data.allMarkdownRemark.nodes.map((node: ArticleNode) => {
+        return <ArticleCard link={node.fields.slug} title={node.frontmatter.title} excerpt={node.excerpt} />
+      })}
     </>
   )
 }

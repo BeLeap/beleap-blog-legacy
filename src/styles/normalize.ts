@@ -34,7 +34,7 @@ export default `
 
     &:hover,
     &:focus {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 
