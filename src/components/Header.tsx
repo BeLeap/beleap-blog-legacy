@@ -60,7 +60,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => (
 
       <MenuInner>
         <MenuLink to="/">Article</MenuLink>
-        <MenuLink to="/">About</MenuLink>
+        <MenuLink to="/about">About</MenuLink>
       </MenuInner>
     </HeaderInner>
   </StyledHeader>
