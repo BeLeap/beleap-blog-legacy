@@ -6463,6 +6463,17 @@ gatsby-plugin-emotion@^4.1.0:
     "@babel/runtime" "^7.12.5"
     "@emotion/babel-preset-css-prop" "^10.0.27"
 
+gatsby-plugin-manifest@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-3.8.0.tgz#11d3ff6532b8edf58d18acfd7121a5fe097a0c80"
+  integrity sha512-Wg8FuhAYdXofrAC8ZlaGGvM3evwpq88kgW3Xe2MuMXSQgdFvhw6SxoS6jzyEdPaCIi45x6C2+P3r1uXNdLECQw==
+  dependencies:
+    "@babel/runtime" "^7.14.0"
+    gatsby-core-utils "^2.8.0"
+    gatsby-plugin-utils "^1.8.0"
+    semver "^7.3.5"
+    sharp "^0.28.1"
+
 gatsby-plugin-page-creator@^2.10.2:
   version "2.10.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.10.2.tgz#808046b292e844447c6539df759b23739ad30c6e"
@@ -6527,6 +6538,13 @@ gatsby-plugin-utils@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-0.9.0.tgz#64b35a0faaabad5b5c99ee8951a9c08cd64be289"
   integrity sha512-InM8PNHtx1kF87qQOlf4pVeNA8lSIsvSjImvN6dvpUjeQqOMRN1avY0W9Trh6LKTF/keWWj975Gk8Vcr+PYyDA==
+  dependencies:
+    joi "^17.2.1"
+
+gatsby-plugin-utils@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-1.8.0.tgz#1e16c0df3cc96a67005a803b11abb887a3f1fad9"
+  integrity sha512-K/EiYx2kKd5BOuwWg86mrvrMh8u9hW40abFLZYH4zRAkthL+vYp/WeckVL/TibZ3jPUhhay9JGjXKR+Ot6BYDQ==
   dependencies:
     joi "^17.2.1"
 
@@ -12591,7 +12609,7 @@ sharp@^0.27.0:
     tar-fs "^2.1.1"
     tunnel-agent "^0.6.0"
 
-sharp@^0.28.0:
+sharp@^0.28.0, sharp@^0.28.1:
   version "0.28.3"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.28.3.tgz#ecd74cefd020bee4891bb137c9850ee2ce277a8b"
   integrity sha512-21GEP45Rmr7q2qcmdnjDkNP04Ooh5v0laGS5FDpojOO84D1DJwUijLiSq8XNNM6e8aGXYtoYRh3sVNdm8NodMA==

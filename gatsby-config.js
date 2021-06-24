@@ -67,6 +67,18 @@ module.exports = {
       }
     },
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'BeLeap Blog',
+        short_name: 'BeLeap Blog',
+        start_url: '/',
+        background_color: '#e0e0e0',
+        theme_color: '#e0e0e0',
+        display: 'standalone',
+        icon: 'src/images/gatsby-icon.png'
+      }
+    }
   ]
 }
