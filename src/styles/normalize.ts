@@ -162,5 +162,7 @@ export default `
     }
   }
 
-  button:focus {outline:0;}
+  a:focus {
+    outline:0;
+  }
 `
