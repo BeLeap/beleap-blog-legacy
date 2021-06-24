@@ -13,8 +13,14 @@ const Card = styled.a`
   border-radius: 1.5rem;
   background: #e0e0e0;
   box-shadow: 0.5rem 0.5rem 1rem #bebebe, -0.5rem -0.5rem 1rem #ffffff;
-  padding: 1.5rem;
+  padding: 2rem;
   margin-bottom: 2rem;
+
+  &:hover {
+    border-radius: 1.5rem;
+    background: #e0e0e0;
+    box-shadow: inset 0.5rem 0.5rem 1rem #bebebe, inset -0.5rem -0.5rem 1rem #ffffff;
+  }
 `
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ link, title, excerpt }) => {
