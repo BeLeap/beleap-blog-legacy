@@ -1,8 +1,7 @@
+import { graphql, Link } from 'gatsby'
 import * as React from 'react'
-import { graphql } from 'gatsby'
-
-import Page from '../components/Page'
 import Container from '../components/Container'
+import Page from '../components/Page'
 import IndexLayout from '../layouts'
 
 interface PageTemplateProps {
@@ -34,6 +33,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => (
         <h1>{data.markdownRemark.frontmatter.title}</h1>
         {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <Link to="/">Go to Article List</Link>
       </Container>
     </Page>
   </IndexLayout>
