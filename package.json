@@ -3,7 +3,7 @@
   "description": "BeLeap blog built with gatsby",
   "version": "1.0.0",
   "private": true,
-  "author": "Changseo Jang<changseo_jang@korea.ac.kr>",
+  "author": "Changseo Jang <changseo_jang@korea.ac.kr>",
   "keywords": [
     "gatsby"
   ],
