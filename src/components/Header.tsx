@@ -35,6 +35,10 @@ const HomepageLink = styled(Link)`
   color: ${colors.black};
   font-size: 3rem;
   font-weight: 600;
+
+  @media screen and (max-width: 320px) {
+    font-size: 2rem;
+  }
 `
 
 const MenuInner = styled(Container)`
