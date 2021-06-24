@@ -1,6 +1,5 @@
-import { Link } from 'gatsby'
 import * as React from 'react'
-import ArticleList from '../components/Articles/ArticleList'
+import ArticleList from '../components/Article/ArticleList'
 import Container from '../components/Container'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
@@ -17,7 +16,6 @@ const IndexPage = () => (
           Lorem Ipsum
         </h1>
         <ArticleList />
-        <Link to="/page-2/">Go to page 2</Link>
       </Container>
     </Page>
   </IndexLayout>
