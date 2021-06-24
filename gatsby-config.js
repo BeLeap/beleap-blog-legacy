@@ -80,6 +80,7 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png'
       }
     },
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    'gatsby-plugin-sitemap'
   ]
 }

@@ -8,13 +8,6 @@ const IndexPage = () => (
   <IndexLayout>
     <Page>
       <Container>
-        <h1
-          style={{
-            marginBottom: '1rem'
-          }}
-        >
-          Lorem Ipsum
-        </h1>
         <ArticleList />
       </Container>
     </Page>
