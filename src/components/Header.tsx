@@ -21,7 +21,7 @@ const StyledHeader = styled.header`
 const HeaderInner = styled(Container)`
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   height: 100%;
   flex-wrap: wrap;
@@ -36,10 +36,13 @@ const HomepageLink = styled(Link)`
 const MenuInner = styled(Container)`
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
-  width: 20rem;
+  align-items: center;
   margin: 0;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-end;
+  }
 `
 
 const MenuLink = styled(Link)`
@@ -47,6 +50,7 @@ const MenuLink = styled(Link)`
   font-size: 2rem;
   font-weight: 600;
   height: 3rem;
+  margin-left: 1rem;
 `
 
 interface HeaderProps {

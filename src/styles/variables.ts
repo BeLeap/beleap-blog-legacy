@@ -61,5 +61,5 @@ export const dimensions = {
 }
 
 export const heights = {
-  header: 7
+  header: 8
 }
