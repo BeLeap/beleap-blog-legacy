@@ -162,7 +162,7 @@ export default `
     }
   }
 
-  a:focus {
-    outline:0;
+  *:focus {
+      outline: 0 !important;
   }
 `
