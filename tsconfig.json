@@ -13,6 +13,5 @@
     "noUnusedParameters": true,
     "removeComments": false,
     "preserveConstEnums": true
-  },
-  "include": ["./src/**/*"]
+  }
 }
