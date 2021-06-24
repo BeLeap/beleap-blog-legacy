@@ -49,7 +49,8 @@ const MenuInner = styled(Container)`
   justify-content: space-between;
   width: 20rem;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
+    justify-content: space-evenly;
   }
 `
 
