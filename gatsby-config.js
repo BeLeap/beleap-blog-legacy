@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'BeLeap blog',
-    description: 'BeLeap blog built with gatsby',
+    title: 'BeLeap Blog',
+    description: 'BeLeap Blog built with gatsby',
     keywords: 'gatsbyjs, gatsby, javascript, sample, something',
     siteUrl: 'https://beleap.codes',
     author: {

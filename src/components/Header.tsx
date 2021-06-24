@@ -21,19 +21,32 @@ const StyledHeader = styled.header`
 const HeaderInner = styled(Container)`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
   height: 100%;
+  flex-wrap: wrap;
 `
 
 const HomepageLink = styled(Link)`
   color: ${colors.black};
   font-size: 3rem;
   font-weight: 600;
+`
 
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
+const MenuInner = styled(Container)`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 20rem;
+  margin: 0;
+`
+
+const MenuLink = styled(Link)`
+  color: ${colors.black};
+  font-size: 2rem;
+  font-weight: 600;
+  height: 3rem;
 `
 
 interface HeaderProps {
@@ -44,6 +57,11 @@ const Header: React.FC<HeaderProps> = ({ title }) => (
   <StyledHeader>
     <HeaderInner>
       <HomepageLink to="/">{title}</HomepageLink>
+
+      <MenuInner>
+        <MenuLink to="/">Article</MenuLink>
+        <MenuLink to="/">About</MenuLink>
+      </MenuInner>
     </HeaderInner>
   </StyledHeader>
 )
