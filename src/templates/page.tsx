@@ -33,7 +33,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => (
         <h1>{data.markdownRemark.frontmatter.title}</h1>
         {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-        <Link to="/">Go to Article List</Link>
+        <Link to="/">Back to Article List</Link>
       </Container>
     </Page>
   </IndexLayout>
