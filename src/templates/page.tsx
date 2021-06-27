@@ -1,3 +1,4 @@
+import styled from '@emotion/styled'
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import Container from '../components/Container'
@@ -26,14 +27,48 @@ interface PageTemplateProps {
   }
 }
 
+const NeumorphicTitle = styled.h1`
+  display: block;
+  color: black;
+  border-radius: 1.5rem;
+  background: #e0e0e0;
+  box-shadow: 0.5rem 0.5rem 1rem #bebebe, -0.5rem -0.5rem 1rem #ffffff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+`
+
+const NeumorphicContent = styled.div`
+  display: block;
+  color: black;
+  border-radius: 1.5rem;
+  background: #e0e0e0;
+  box-shadow: 0.5rem 0.5rem 1rem #bebebe, -0.5rem -0.5rem 1rem #ffffff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+`
+
+const NeumorphicLink = styled(Link)`
+  display: block;
+  border-radius: 1.5rem;
+  background: #e0e0e0;
+  box-shadow: 0.5rem 0.5rem 1rem #bebebe, -0.5rem -0.5rem 1rem #ffffff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  &:hover {
+    background: #e0e0e0;
+    box-shadow: inset 0.5rem 0.5rem 1rem #bebebe, inset -0.5rem -0.5rem 1rem #ffffff;
+  }
+`
+
 const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => (
   <IndexLayout>
     <Page>
       <Container>
-        <h1>{data.markdownRemark.frontmatter.title}</h1>
+        <NeumorphicTitle>{data.markdownRemark.frontmatter.title}</NeumorphicTitle>
         {/* eslint-disable-next-line react/no-danger */}
-        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-        <Link to="/">Back to Article List</Link>
+        <NeumorphicContent dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <NeumorphicLink to="/">Back to Article List</NeumorphicLink>
       </Container>
     </Page>
   </IndexLayout>

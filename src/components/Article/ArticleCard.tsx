@@ -17,7 +17,6 @@ const Card = styled.a`
   margin-bottom: 2rem;
 
   &:hover {
-    border-radius: 1.5rem;
     background: #e0e0e0;
     box-shadow: inset 0.5rem 0.5rem 1rem #bebebe, inset -0.5rem -0.5rem 1rem #ffffff;
   }
