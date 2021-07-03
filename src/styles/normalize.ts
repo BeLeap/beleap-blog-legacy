@@ -2,6 +2,9 @@ import { getEmSize } from './mixins'
 import { breakpoints, colors, dimensions, fonts } from './variables'
 
 export default `
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+  @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css");
+
   html {
     box-sizing: border-box;
   }
@@ -168,5 +171,9 @@ export default `
   select,
   a {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+
+  code {
+    font-family: ${fonts.monospace};
   }
 `
