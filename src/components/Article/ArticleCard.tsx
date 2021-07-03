@@ -14,7 +14,7 @@ const Card = styled.a`
   background: #e0e0e0;
   box-shadow: 0.5rem 0.5rem 1rem #bebebe, -0.5rem -0.5rem 1rem #ffffff;
   padding: 2rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
   margin-bottom: 2rem;
 
   &:hover {
