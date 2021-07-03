@@ -8,6 +8,11 @@ interface ArticleCardProps {
   excerpt: string
 }
 
+const ExcerptWrapper = styled.p`
+  margin-top: 2rem;
+  padding: 2rem;
+  ${variables.indrop}
+`
 const Card = styled.a`
   display: block;
   color: black;
@@ -19,12 +24,6 @@ const Card = styled.a`
   &:hover {
     ${variables.indrop}
   }
-`
-
-const ExcerptWrapper = styled.p`
-  margin-top: 2rem;
-  padding: 2rem;
-  ${variables.indrop}
 `
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ link, title, excerpt }) => {

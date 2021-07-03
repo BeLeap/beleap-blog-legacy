@@ -73,3 +73,9 @@ border-radius: 1.5rem;
 background: #e0e0e0;
 box-shadow: 0.5rem 0.5rem 1rem #bebebe, -0.5rem -0.5rem 1rem #ffffff;
 `
+
+export const nodrop = `
+border-radius: 1.5rem;
+background: #e0e0e0;
+box-shadow: none;
+`
