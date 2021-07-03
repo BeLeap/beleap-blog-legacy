@@ -54,6 +54,7 @@ const NeumorphicLink = styled(Link)`
   box-shadow: 0.5rem 0.5rem 1rem #bebebe, -0.5rem -0.5rem 1rem #ffffff;
   padding: 2rem;
   margin-bottom: 2rem;
+  text-align: right;
 
   &:hover {
     background: #e0e0e0;
@@ -68,7 +69,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => (
         <NeumorphicTitle>{data.markdownRemark.frontmatter.title}</NeumorphicTitle>
         {/* eslint-disable-next-line react/no-danger */}
         <NeumorphicContent dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-        <NeumorphicLink to="/">Back to Article List</NeumorphicLink>
+        <NeumorphicLink to="/"> {'< Back to Article List'}</NeumorphicLink>
       </Container>
     </Page>
   </IndexLayout>
