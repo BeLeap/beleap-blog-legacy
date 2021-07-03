@@ -14,6 +14,11 @@ const ImportantAnchor = styled.a`
   font-weight: bold;
 `
 
+const DiscordAnchor = styled.a`
+  font-weight: bold;
+  color: #5865f2;
+`
+
 const About: React.FC = () => {
   return (
     <AboutWrapper>
@@ -33,6 +38,11 @@ const About: React.FC = () => {
       <br />
       Using <ImportantAnchor href="https://rust-lang.org">Rust</ImportantAnchor> at{' '}
       <ImportantAnchor href="https://github.com/OxideEngine">OxideEngine</ImportantAnchor>
+      <h2>Contact</h2>
+      <h3>Mail</h3>
+      <ImportantAnchor href="mailto:changseo_jang@korea.ac.kr">changseo_jang@korea.ac.kr</ImportantAnchor>
+      <h3>Discord</h3>
+      <DiscordAnchor href="https://discord.com/users/540435382853173280">BeLeap#1012</DiscordAnchor>
     </AboutWrapper>
   )
 }
