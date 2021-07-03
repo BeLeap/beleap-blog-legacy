@@ -55,6 +55,7 @@ const NeumorphicLink = styled(Link)`
   padding: 2rem;
   margin-bottom: 2rem;
   text-align: right;
+  font-weight: bold;
 
   &:hover {
     background: #e0e0e0;
