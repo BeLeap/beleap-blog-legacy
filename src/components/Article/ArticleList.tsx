@@ -14,7 +14,7 @@ interface ArticleNode {
 
 const ArticleList: React.FC<{}> = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query GetListOfArticle {
       allMarkdownRemark {
         nodes {
           excerpt
