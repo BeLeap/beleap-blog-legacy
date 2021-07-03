@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import * as React from 'react'
+import * as variables from '../../styles/variables'
 
 interface ArticleCardProps {
   link: string
@@ -10,26 +11,20 @@ interface ArticleCardProps {
 const Card = styled.a`
   display: block;
   color: black;
-  border-radius: 1.5rem;
-  background: #e0e0e0;
-  box-shadow: 0.5rem 0.5rem 1rem #bebebe, -0.5rem -0.5rem 1rem #ffffff;
   padding: 2rem;
   padding-bottom: 1rem;
   margin-bottom: 2rem;
+  ${variables.outdrop}
 
   &:hover {
-    background: #e0e0e0;
-    box-shadow: inset 0.5rem 0.5rem 1rem #bebebe, inset -0.5rem -0.5rem 1rem #ffffff;
+    ${variables.indrop}
   }
 `
 
 const ExcerptWrapper = styled.p`
-  border-radius: 1.5rem;
-  background: #e0e0e0;
-  box-shadow: inset 0.5rem 0.5rem 1rem #bebebe, inset -0.5rem -0.5rem 1rem #ffffff;
-  transition: box-shadow 1s ease-in-out;
   margin-top: 2rem;
   padding: 2rem;
+  ${variables.indrop}
 `
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ link, title, excerpt }) => {

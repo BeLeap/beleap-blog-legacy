@@ -4,6 +4,7 @@ import * as React from 'react'
 import Container from '../components/Container'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
+import * as variables from '../styles/variables'
 
 interface PageTemplateProps {
   data: {
@@ -30,36 +31,29 @@ interface PageTemplateProps {
 const NeumorphicTitle = styled.h1`
   display: block;
   color: black;
-  border-radius: 1.5rem;
-  background: #e0e0e0;
-  box-shadow: 0.5rem 0.5rem 1rem #bebebe, -0.5rem -0.5rem 1rem #ffffff;
   padding: 2rem;
   margin-bottom: 2rem;
+  ${variables.outdrop}
 `
 
 const NeumorphicContent = styled.div`
   display: block;
   color: black;
-  border-radius: 1.5rem;
-  background: #e0e0e0;
-  box-shadow: 0.5rem 0.5rem 1rem #bebebe, -0.5rem -0.5rem 1rem #ffffff;
   padding: 2rem;
   margin-bottom: 2rem;
+  ${variables.outdrop}
 `
 
 const NeumorphicLink = styled(Link)`
   display: block;
-  border-radius: 1.5rem;
-  background: #e0e0e0;
-  box-shadow: 0.5rem 0.5rem 1rem #bebebe, -0.5rem -0.5rem 1rem #ffffff;
   padding: 2rem;
   margin-bottom: 2rem;
   text-align: right;
   font-weight: bold;
+  ${variables.outdrop}
 
   &:hover {
-    background: #e0e0e0;
-    box-shadow: inset 0.5rem 0.5rem 1rem #bebebe, inset -0.5rem -0.5rem 1rem #ffffff;
+    ${variables.indrop}
   }
 `
 
