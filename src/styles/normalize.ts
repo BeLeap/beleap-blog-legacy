@@ -7,6 +7,7 @@ export default `
 
   html {
     box-sizing: border-box;
+    word-wrap: break-word;
   }
 
   *,
