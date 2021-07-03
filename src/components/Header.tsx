@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import * as React from 'react'
+import * as variables from '../styles/variables'
 import { colors, dimensions, heights } from '../styles/variables'
 import Container from './Container'
 
@@ -26,7 +27,7 @@ const HeaderInner = styled(Container)`
   flex-wrap: wrap;
   justify-content: space-around;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${variables.breakpoints.sm}px) {
     justify-content: space-between;
   }
 `

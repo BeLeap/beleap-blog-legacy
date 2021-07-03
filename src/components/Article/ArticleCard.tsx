@@ -20,7 +20,6 @@ const Card = styled.a`
   &:hover {
     background: #e0e0e0;
     box-shadow: inset 0.5rem 0.5rem 1rem #bebebe, inset -0.5rem -0.5rem 1rem #ffffff;
-    transition: box-shadow 1s ease-in-out;
   }
 `
 
