@@ -21,6 +21,7 @@ const DetailedAboutWrapper = styled.div`
 
 const ImportantAnchor = styled.a`
   font-weight: bold;
+  word-wrap: break-word;
 `
 
 const DiscordAnchor = styled.a`
