@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 'Example Markdown page'
+title: 'Example Markdown page 3'
 ---
 
 Now we're writing in Markdown! Pretty nice, huh?

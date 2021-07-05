@@ -1150,6 +1150,13 @@
     ts-node "^9"
     tslib "^2"
 
+"@gatsby-contrib/gatsby-plugin-elasticlunr-search@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@gatsby-contrib/gatsby-plugin-elasticlunr-search/-/gatsby-plugin-elasticlunr-search-3.0.2.tgz#f60462f5f6283af170a22b28e2f159dd936f6a7b"
+  integrity sha512-GQUwjZ6/Q6jFl5Kk1zDtquQewbjX4dsLE8g0/V/aA7s5Mvtc7plCYtvSdarqkJdfC41VC31NubHseDqUkoKeRA==
+  dependencies:
+    elasticlunr "^0.9.5"
+
 "@graphql-tools/batch-execute@^7.1.2":
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/@graphql-tools/batch-execute/-/batch-execute-7.1.2.tgz#35ba09a1e0f80f34f1ce111d23c40f039d4403a0"
@@ -1823,6 +1830,11 @@
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.5.tgz#b14efa8852b7768d898906613c23f688713e02cd"
   integrity sha512-Q1y515GcOdTHgagaVFhHnIFQ38ygs/kmxdNpvpou+raI9UO3YZcHDngBSYKQklcKlvA7iuQlmIKbzvmxcOE9CQ==
+
+"@types/elasticlunr@^0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@types/elasticlunr/-/elasticlunr-0.9.1.tgz#75bd34567447235c26422c6d00de9151ba12ca3e"
+  integrity sha512-FOS+tbeQKVIq8HAQ5WkWXMPIEeLFJViIMnWfLsxtRKX0jtWSM+emZe43+sKZgwny7EIfVdbbqdtr+RL2h18ykw==
 
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
@@ -5089,6 +5101,11 @@ ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
+
+elasticlunr@^0.9.5:
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/elasticlunr/-/elasticlunr-0.9.5.tgz#65541bb309dddd0cf94f2d1c8861b2be651bb0d5"
+  integrity sha1-ZVQbswnd3Qz5Ty0ciGGyvmUbsNU=
 
 electron-to-chromium@^1.3.723:
   version "1.3.756"

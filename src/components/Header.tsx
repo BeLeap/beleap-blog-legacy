@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 1.5rem 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
   z-index: 999;
