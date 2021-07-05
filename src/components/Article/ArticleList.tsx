@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import { Index } from 'elasticlunr'
 import { graphql, useStaticQuery } from 'gatsby'
 import React, { ChangeEvent, useState } from 'react'
+import { BiSearchAlt } from 'react-icons/bi'
 import * as variables from '../../styles/variables'
 import ArticleCard from './ArticleCard'
 
@@ -27,16 +28,32 @@ interface ArticleNode {
   }
 }
 
+const InputWrapper = styled.div`
+  position: relative;
+`
+
 const Input = styled.input`
   border: 0;
   outline: none;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding: 1.5rem;
+  margin: 1rem 0 4rem 0;
   width: 100%;
   ${variables.outdrop}
 
   &:focus {
     ${variables.indrop}
+  }
+`
+
+const SearchIcon = styled(BiSearchAlt)`
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  top: 28%;
+  right: 2rem;
+
+  @media screen and (min-width: ${variables.breakpoints.xs}px) {
+    display: block;
   }
 `
 
@@ -89,12 +106,14 @@ const ArticleList: React.FC<SearchProps> = ({ searchIndex }) => {
           })
       )
     }
-    console.log('search')
   }
 
   return (
     <>
-      <Input type="text" value={query} onChange={search} placeholder="Search Anything Here!" />
+      <InputWrapper>
+        <SearchIcon />
+        <Input type="search" value={query} onChange={search} placeholder="Search Anything Here!" />
+      </InputWrapper>
       {results.length !== 0
         ? results.map(page => <ArticleCard link={page.slug} title={page.title} excerpt={page.excerpt} />)
         : data.allMarkdownRemark.nodes.map((node: ArticleNode) => (

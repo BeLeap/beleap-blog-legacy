@@ -37,7 +37,7 @@ const HomepageLink = styled(Link)`
   font-size: 3rem;
   font-weight: 600;
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: ${variables.breakpoints.xs}px) {
     font-size: 2rem;
   }
 `
@@ -50,7 +50,7 @@ const MenuInner = styled(Container)`
   justify-content: space-between;
   width: 20rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${variables.breakpoints.sm}px) {
     justify-content: space-evenly;
   }
 `
