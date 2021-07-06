@@ -49,8 +49,9 @@ const SearchIcon = styled(BiSearchAlt)`
   display: none;
   position: absolute;
   overflow: hidden;
-  top: 28%;
-  right: 2rem;
+  top: 2.6rem;
+  right: 1.6rem;
+  color: gray;
 
   @media screen and (min-width: ${variables.breakpoints.xs}px) {
     display: block;
