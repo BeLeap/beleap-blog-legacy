@@ -3,7 +3,7 @@ layout: page
 title: 'Podman 적용하기'
 ---
 
-Docker Desktop이 유로화되면서 podman을 사용해야할 필요성이 생겼고 이를 적용하기 위한 방법을 설명합니다.
+Docker Desktop이 유료화되면서 podman을 사용해야할 필요성이 생겼고 이를 적용하기 위한 방법을 설명합니다.
 
 ## Podman 설치(macOS 기준)
 
