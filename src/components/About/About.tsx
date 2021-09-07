@@ -48,6 +48,9 @@ const About: React.FC = () => {
         <ImportantAnchor href="https://grpc.io">gRPC</ImportantAnchor> at <ImportantAnchor href="https://riiid.co">Riiid</ImportantAnchor>{' '}
         as Backend Engineer
         <br />
+        Using <ImportantAnchor href="https://www.typescriptlang.org">Typescript</ImportantAnchor> at{' '}
+        <ImportantAnchor href="https://github.com/pbkit">pbkit</ImportantAnchor>
+        <br />
         Using <ImportantAnchor href="https://rust-lang.org">Rust</ImportantAnchor> at{' '}
         <ImportantAnchor href="https://github.com/OxideEngine">OxideEngine</ImportantAnchor>
       </DetailedAboutWrapper>
