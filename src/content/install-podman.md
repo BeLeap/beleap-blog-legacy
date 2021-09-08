@@ -24,7 +24,7 @@ podman machine start
 ### Host Machine
 
 Podman에서 `-p` 옵션을 쓰기 위해서는 `--network=bridge`옵션이 필요합니다.
-이것을 매번 설정하지 않기 위해서 podman이 설치된 머신의 `~/.config/containers/contaers.conf`의 `[containers]` 밑에 `rootless_network = "cni"`를 추가해줘야합니다.
+이것을 매번 설정하지 않기 위해서 podman이 설치된 머신의 `~/.config/containers/containers.conf`의 `[containers]` 밑에 `rootless_network = "cni"`를 추가해줘야합니다.
 
 ### Virtual Machine
 
