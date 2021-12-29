@@ -40,16 +40,28 @@ const About: React.FC = () => {
         Computer Science & Engineering @ <ImportantAnchor href="http://korea.edu">Korea Univ.</ImportantAnchor>
         <br />
         Backend Engineer @ <ImportantAnchor href="https://riiid.co">Riiid</ImportantAnchor>
+        <br />
+        Software Engineer @ <ImportantAnchor href="https://nearthlab.com">Nearthlab</ImportantAnchor>
+        <br />
+        ML Engineer @ <ImportantAnchor href="https://mindslab.ai:8080/kr/company">MINDs Lab</ImportantAnchor>
       </DetailedAboutWrapper>
       <DetailedAboutWrapper>
         <h2>Tech Spec</h2>
-        Using <ImportantAnchor href="https://spring.io">Spring</ImportantAnchor> (with{' '}
+        Used <ImportantAnchor href="https://spring.io">Spring Boot</ImportantAnchor> (with{' '}
         <ImportantAnchor href="https://kotlinlang.org">Kotlin</ImportantAnchor>) &{' '}
         <ImportantAnchor href="https://grpc.io">gRPC</ImportantAnchor> at <ImportantAnchor href="https://riiid.co">Riiid</ImportantAnchor>{' '}
         as Backend Engineer
         <br />
-        Using <ImportantAnchor href="https://www.typescriptlang.org">Typescript</ImportantAnchor> at{' '}
+        Used <ImportantAnchor href="https://www.typescriptlang.org">Typescript</ImportantAnchor> at{' '}
         <ImportantAnchor href="https://github.com/pbkit">pbkit</ImportantAnchor>
+        <br />
+        Used <ImportantAnchor href="https://nestjs.com">NestJS</ImportantAnchor> (with{' '}
+        <ImportantAnchor href="https://www.typescriptlang.org">Typescript</ImportantAnchor>) at{' '}
+        <ImportantAnchor href="https://nearthlab.com">Nearthlab</ImportantAnchor> as Software Engineer
+        <br />
+        Using <ImportantAnchor href="https://nestjs.com">Python</ImportantAnchor> &{' '}
+        <ImportantAnchor href="https://grpc.io">gRPC</ImportantAnchor> at{' '}
+        <ImportantAnchor href="https://mindslab.ai:8080/kr/company">MINDs Lab</ImportantAnchor> as ML Engineer
         <br />
         Using <ImportantAnchor href="https://rust-lang.org">Rust</ImportantAnchor> at{' '}
         <ImportantAnchor href="https://github.com/OxideEngine">OxideEngine</ImportantAnchor>
@@ -57,7 +69,7 @@ const About: React.FC = () => {
       <DetailedAboutWrapper>
         <h2>Contact</h2>
         <h3>Mail</h3>
-        <ImportantAnchor href="mailto:changseo_jang@korea.ac.kr">changseo_jang@korea.ac.kr</ImportantAnchor>
+        <ImportantAnchor href="mailto:changseo.jang@korea.ac.kr">changseo.jang@korea.ac.kr</ImportantAnchor>
         <h3>Discord</h3>
         <DiscordAnchor href="https://discord.com/users/540435382853173280">BeLeap#1012</DiscordAnchor>
       </DetailedAboutWrapper>
