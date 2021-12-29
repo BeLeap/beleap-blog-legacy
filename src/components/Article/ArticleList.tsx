@@ -116,8 +116,8 @@ const ArticleList: React.FC<SearchProps> = ({ searchIndex }) => {
         <Input type="search" value={query} onChange={search} placeholder="Search Anything Here!" />
       </InputWrapper>
       {results.length !== 0
-        ? results.map(page => <ArticleCard link={page.slug} title={page.title} excerpt={page.excerpt} />)
-        : data.allMarkdownRemark.nodes.map((node: ArticleNode) => (
+        ? results.reverse().map(page => <ArticleCard link={page.slug} title={page.title} excerpt={page.excerpt} />)
+        : data.allMarkdownRemark.nodes.reverse().map((node: ArticleNode) => (
             <ArticleCard link={node.fields.slug} title={node.frontmatter.title} excerpt={node.excerpt} />
           ))}
     </>
