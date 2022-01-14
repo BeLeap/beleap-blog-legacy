@@ -23,6 +23,7 @@ interface PageTemplateProps {
       excerpt: string
       frontmatter: {
         title: string
+        data: string
       }
     }
   }

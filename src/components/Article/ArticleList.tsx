@@ -70,6 +70,7 @@ const ArticleList: React.FC<SearchProps> = ({ searchIndex }) => {
           excerpt
           frontmatter {
             title
+            date
           }
           fields {
             slug
@@ -117,7 +118,9 @@ const ArticleList: React.FC<SearchProps> = ({ searchIndex }) => {
       </InputWrapper>
       {results.length !== 0
         ? results.map(page => <ArticleCard link={page.slug} title={page.title} excerpt={page.excerpt} />)
-        : data.allMarkdownRemark.nodes.map((node: ArticleNode) => (
+        : data.allMarkdownRemark.nodes.sort((a, b) => (
+          new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
+        )).map((node: ArticleNode) => (
             <ArticleCard link={node.fields.slug} title={node.frontmatter.title} excerpt={node.excerpt} />
           ))}
     </>
