@@ -22,7 +22,7 @@ export const colors = {
 }
 
 export const fonts = {
-  sansSerif: "'IBMPlexSansKR', sans-serif",
+  sansSerif: "'Roboto', sans-serif",
   serif: 'Georgia, "Times New Roman", Times, serif',
   monospace: "'Cascadia Code', monospace, monospace"
 }
