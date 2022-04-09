@@ -69,7 +69,7 @@ const About: React.FC = () => {
       <DetailedAboutWrapper>
         <h2>Contact</h2>
         <h3>Mail</h3>
-        <ImportantAnchor href="mailto:beelap@beleap.codes">belepa@beleap.cdoes</ImportantAnchor>
+        <ImportantAnchor href="mailto:beelap@beleap.codes">beleap@beleap.codes</ImportantAnchor>
         <h3>Discord</h3>
         <DiscordAnchor href="https://discord.com/users/540435382853173280">BeLeap#1012</DiscordAnchor>
       </DetailedAboutWrapper>
