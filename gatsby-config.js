@@ -3,11 +3,11 @@ module.exports = {
     title: 'BeLeap Blog',
     description: 'BeLeap Blog built with gatsby',
     keywords: 'gatsbyjs, gatsby, javascript, sample, something',
-    siteUrl: 'https://beleap.codes',
+    siteUrl: 'https://www.beleap.codes',
     author: {
       name: 'Changseo Jang',
-      url: 'https://twitter.com/leap_be',
-      email: 'changseo_jang@korea.ac.kr'
+      url: 'https://twitter.com/beleap_',
+      email: 'beleap@beleap.codes'
     }
   },
   plugins: [
