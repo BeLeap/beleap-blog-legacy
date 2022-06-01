@@ -65,7 +65,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-icons": "^4.2.0",
-    "sharp": "^0.28.3",
+    "sharp": "^0.30.5",
     "typescript": "^3.5.2"
   },
   "devDependencies": {
